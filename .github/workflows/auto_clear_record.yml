@@ -1,6 +1,5 @@
 name: 自动任务-删除工作流历史运行记录
 on:
-# Run weekly, at 00:00 on sunday.
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
