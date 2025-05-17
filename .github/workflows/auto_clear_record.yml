@@ -1,4 +1,4 @@
-name: Delete workflow run record
+name: 删除工作流历史运行记录
 on:
 # Run weekly, at 00:00 on sunday.
   schedule:
@@ -12,7 +12,7 @@ jobs:
       actions: write
       contents: read
     steps:
-      - name: 删除当前仓库的历史工作流记录
+      - name: 删除当前仓库的工作流历史运行记录
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
