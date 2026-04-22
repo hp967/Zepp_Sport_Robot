@@ -1,4 +1,4 @@
-# Zepp Sport Robot - Zepp 平台运动数据 API 研究项目
+# Zepp Sport Robot - 基于 Zepp 平台的运动数据 API 与 GitHub Actions 实现的每日自动刷取步数程序
 
 ![上次提交时间](https://img.shields.io/github/last-commit/FlameTech6/Zepp_Sport_Robot?label=%E4%B8%8A%E6%AC%A1%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4)
 
@@ -8,9 +8,9 @@
 
 ## 🔧 技术实现
 
-- Zepp 平台数据包结构解析
-- 基于 HTTPS 的 API 通信示例
-- GitHub Actions 定时任务配置参考
+- Zepp 平台的 API 通信数据包的解析
+- 基于 HTTP(S) 的 API 通信
+- 通过 GitHub Actions 的 cron 表达式执行定时任务
 
 ---
 
