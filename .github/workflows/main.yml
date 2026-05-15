@@ -5,7 +5,7 @@ on:
   push:               # 提交时自动跑一次（激活用）
     branches: [ main ]
   schedule:
-  - cron: '6 10 * * *'
+  - cron: '10 10 * * *'
     timezone: 'Asia/Shanghai'
 jobs:
   run-python-script:
