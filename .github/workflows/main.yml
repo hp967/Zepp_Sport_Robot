@@ -5,8 +5,8 @@ on:
   push:               # 提交时自动跑一次（激活用）
     branches: [ main ]
   schedule:
-    - cron: '0 2 * * *'
-
+  - cron: '6 10 * * *'
+    timezone: 'Asia/Shanghai'
 jobs:
   run-python-script:
     runs-on: ubuntu-latest
