@@ -1,0 +1,30 @@
+name: 自动任务-修改Zepp当天运动数据
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7 * * *'      # 北京时间 07:00，对应 UTC 23:00
+      timezone: 'Asia/Shanghai'
+  push:
+    branches: [ main ]
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v6
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: 安装依赖
+        run: pip install requests==2.26.0
+
+      - name: 运行主程序
+        env:
+          ACCOUNT: ${{ secrets.ACCOUNT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: python ./main.py
